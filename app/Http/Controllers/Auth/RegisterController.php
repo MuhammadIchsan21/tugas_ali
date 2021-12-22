@@ -51,6 +51,15 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'nim' => ['required', 'string', 'max:7'],
+            'programstudi' => ['required', 'string', 'max:255'],
+            'tempatlahir' => ['required', 'string', 'max:255'],
+            'tanggallahir' => ['required'],
+            'jeniskelamin' => ['required'],
+            'agama' => ['required','string', 'max:255'],
+            'alamat' => ['required','string', 'max:255'],
+            'kota' => ['required','string', 'max:255'],
+            'provinsi' => ['required','string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -67,6 +76,15 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'nim' => $data['nim'],
+            'programstudi' => $data['programstudi'],
+            'tempatlahir' => $data['tempatlahir'],
+            'tanggallahir' => $data['tanggallahir'],
+            'jeniskelamin' => $data['jeniskelamin'],
+            'agama' => $data['agama'],
+            'alamat' => $data['alamat'],
+            'kota' => $data['kota'],
+            'provinsi' => $data['provinsi'],
             'password' => Hash::make($data['password']),
         ]);
     }

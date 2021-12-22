@@ -13,23 +13,23 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
     <li class="nav-item active">
         <a class="nav-link" href="{{ route('dosen.index') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fa fa-user"></i>
             <span>Dosen</span></a>
     </li>
     <li class="nav-item active">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+        <a class="nav-link" href="{{ route('bimbingan.index') }}">
+            <i class="fa fa-book"></i>
             <span>Bimbingan</span></a>
     </li>
     <li class="nav-item active">
         <a class="nav-link" href="{{ route('gallery.index') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-images"></i>
             <span>Gallery</span></a>
     </li>
 

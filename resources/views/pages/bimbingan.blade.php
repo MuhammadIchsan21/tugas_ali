@@ -23,15 +23,15 @@
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="#" method="POST">
+            <form action="{{ route('bimbingan.store') }}" method="POST">
                 @csrf
                 <div class="form-group">
-                    <label>nim</label>
+                    <label>Nim</label>
                     <input type="text" class="form-control" name="nim" placeholder="Nim">
                 </div>
                 <div class="form-group">
                     <label>ID Dosen</label>
-                    <input type="text" class="form-control" name="iddosen" placeholder="ID Dosen">
+                    <input type="text" class="form-control" name="iddosen" placeholder="ID Dosen" />
                 </div>
                 <div class="form-group">
                     <label>Uraian Bimbingan</label>

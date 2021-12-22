@@ -17,16 +17,23 @@ Route::get('/', 'HomeController@index')
         ->name('home');
 Route::get('/detail/{namadosen}', 'DetailController@index')
         ->name('detail');
-Route::get('/bimbingan', 'BimbinganController@index')
-        ->name('bimbingan');
+Route::get('/bimbingan', 'BimbinganController@create')
+        ->name('bimbingan')
+        ->middleware(['auth']);
+Route::post('/bimbingan', 'BimbinganController@store')
+            ->name('bimbingan.store')
+            ->middleware(['auth']);
+
 Route::prefix('admin')
         ->namespace('Admin')
+        ->middleware(['auth', 'admin'])
         ->group(function () {
             Route::get('/', 'DashboardController@index')
             ->name('dashboard');
 
             Route::resource('dosen', 'DosenController');
             Route::resource('gallery', 'GalleryController');
+            Route::resource('bimbingan', 'BimbinganController');
         });
 
 Auth::routes();

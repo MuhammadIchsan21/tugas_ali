@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row border-top justify-content-center align-items-center pt-4">
             <div class="col-auto text-gray-500 font-weight-light">
-                2020 Copyright Nomads • All rights reserved • Made in Balikpapan
+                Bimbingan | Tugas Web Pak Subur
             </div>
         </div>
     </div>
